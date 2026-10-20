@@ -1,0 +1,73 @@
+# Decap CMS: Laura maina cenas, pakalpojumus, foto un tekstus bez koda.
+# Pirms lietošanas: lapai jābūt GitHub repozitorijā un pieslēgtai Netlify (README.md -> "Admin panelis").
+backend:
+  name: github
+  repo: pogodinq112-lab/lapsabarber-site
+  branch: main
+
+locale: lv
+media_folder: img/uploads
+public_folder: /img/uploads
+
+collections:
+  - name: site
+    label: Lapa
+    files:
+      - name: content
+        label: Cenas, pakalpojumi un foto
+        file: content.json
+        format: json
+        fields:
+          - { name: _info, label: Piezīme, widget: hidden }
+          - { name: booking, label: Pieraksta saite (Fresha), widget: string }
+          - { name: phone, label: Telefons zvanam (bez atstarpēm), widget: string }
+          - { name: phoneLabel, label: Telefons tekstā, widget: string }
+          - { name: instagram, label: Instagram saite, widget: string }
+          - { name: map, label: Kartes saite, widget: string }
+          - name: haircuts
+            label: Griezumi (var izvēlēties vienu)
+            widget: list
+            fields:
+              - { name: id, label: "ID (latīņu burti, bez atstarpēm)", widget: string }
+              - { name: name, label: Nosaukums, widget: string }
+              - { name: note, label: Piezīme, widget: string, required: false }
+              - { name: price, label: "Cena, €", widget: number, value_type: int }
+          - name: extras
+            label: Papildu pakalpojumi
+            widget: list
+            fields:
+              - { name: id, label: "ID (latīņu burti, bez atstarpēm)", widget: string }
+              - { name: name, label: Nosaukums, widget: string }
+              - { name: note, label: Piezīme, widget: string, required: false }
+              - { name: price, label: "Cena, €", widget: number, value_type: int }
+              - { name: from, label: "Rādīt \"no ... €\"", widget: boolean, required: false }
+          - name: combo
+            label: Kombo cena
+            widget: object
+            fields:
+              - { name: _info, label: Piezīme, widget: hidden }
+              - { name: haircut, label: Griezuma ID, widget: string }
+              - { name: extra, label: Papildu pakalpojuma ID, widget: string }
+              - { name: name, label: Nosaukums, widget: string }
+              - { name: price, label: "Kopā, €", widget: number, value_type: int }
+          - name: included
+            label: Bez piemaksas
+            widget: list
+            fields:
+              - { name: name, label: Nosaukums, widget: string }
+              - { name: note, label: Apraksts, widget: string }
+          - name: works
+            label: Darbi (galerija)
+            widget: list
+            fields:
+              - { name: src, label: Foto, widget: image }
+              - { name: alt, label: "Ko redz foto (neredzīgajiem un Google)", widget: string }
+              - { name: caption, label: Paraksts, widget: string }
+              - { name: w, label: Platums px, widget: number, required: false }
+              - { name: h, label: Augstums px, widget: number, required: false }
+          - name: team
+            label: Komanda
+            widget: list
+            fields:
+              - { name: name, label: Vārds, widget: string }
+              - { name: role, label: Loma, widget: string }

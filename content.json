@@ -1,0 +1,54 @@
+{
+  "_info": "Visi mainīgie teksti un cenas. Cenas eiro, bez € zīmes. \"from\": true nozīmē \"no ... €\". Pēc labošanas pārbaudi, vai fails ir derīgs JSON (komati, pēdiņas).",
+
+  "booking": "https://www.fresha.com/a/lapsabarber-m-nometnu-iela-45a-riga-maza-nometnu-iela-45a-q5n4v22g?pId=1348700",
+  "phone": "+37127885889",
+  "phoneLabel": "+371 27885889",
+  "instagram": "https://www.instagram.com/lapsa_barber/",
+  "map": "https://www.google.com/maps/search/?api=1&query=Maz%C4%81+Nomet%C5%86u+iela+45A%2C+R%C4%ABga",
+
+  "haircuts": [
+    { "id": "griezums", "name": "Vīriešu matu griezums", "price": 35 },
+    { "id": "gari", "name": "Gari mati", "note": "garums sākot no zoda", "price": 45 },
+    { "id": "berni", "name": "Bērnu griezums", "note": "līdz 17 g. v.", "price": 25 },
+    { "id": "ilgvilni", "name": "Ilgviļņi + griezums", "price": 70 }
+  ],
+
+  "extras": [
+    { "id": "barda", "name": "Bārdas korekcija", "price": 25 },
+    { "id": "kamuflaza", "name": "Matu / bārdas kamuflāža", "price": 15, "from": true },
+    { "id": "vaksacija", "name": "Deguna / ausu vaksācija", "price": 5, "from": true },
+    { "id": "manikirs", "name": "Vīriešu klasiskais manikīrs", "note": "nagu un kutikulu kopšana", "price": 35 }
+  ],
+
+  "combo": {
+    "_info": "Ja izvēlēts šis griezums + šī papildu pakalpojums, abi kopā maksā price.",
+    "haircut": "griezums",
+    "extra": "barda",
+    "name": "Matu griezums + bārdas korekcija",
+    "price": 50
+  },
+
+  "included": [
+    { "name": "Konsultācija", "note": "izvēlamies stilu kopā" },
+    { "name": "Galvas mazgāšana", "note": "ar profesionālu kosmētiku" },
+    { "name": "Galvas masāža", "note": "relaksējoša procedūra" },
+    { "name": "Bezmaksas stāvvieta", "note": "pie paša šopa durvīm" },
+    { "name": "Dzēriens", "note": "kafija, tēja, ūdens, gāzētie dzērieni" },
+    { "name": "Sarkasms", "note": "pēc izvēles vai meistara noskaņojuma" }
+  ],
+
+  "works": [
+    { "src": "img/ba-1.webp", "w": 900, "h": 1200, "alt": "Jaunieša matu griezums: pirms un pēc", "caption": "Pirms / pēc" },
+    { "src": "img/mohawk.webp", "w": 900, "h": 1200, "alt": "Vīrietis profilā ar baltu, augstu ieveidotu irokēzi", "caption": "Irokēzis" },
+    { "src": "img/armands-cut.webp", "w": 900, "h": 1200, "alt": "Bārberis griež klienta matus ar šķērēm", "caption": "Griezums ar šķērēm" },
+    { "src": "img/ba-2.webp", "w": 960, "h": 1200, "alt": "Puikas matu griezums: pirms ar gariem matiem un pēc", "caption": "Pirms / pēc" },
+    { "src": "img/ba-3.webp", "w": 960, "h": 1200, "alt": "Jaunieša matu griezums profilā: pirms un pēc", "caption": "Pirms / pēc" },
+    { "src": "img/boy-blue.webp", "w": 900, "h": 1200, "alt": "Smaidīgs puika ar zili tonētiem, uz augšu ieveidotiem matiem", "caption": "Ar krāsu" }
+  ],
+
+  "team": [
+    { "name": "Laura", "role": "Īpašniece un bārbere" },
+    { "name": "Armands", "role": "Bārberis" }
+  ]
+}
